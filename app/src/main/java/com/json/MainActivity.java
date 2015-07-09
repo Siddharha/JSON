@@ -1,9 +1,9 @@
 package com.json;
 
+import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,7 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends Activity {
 
     String url ="http://api.openweathermap.org/data/2.5/weather?q=kolkata,in";
     TextView Title_it,Con_txt,txt_dsc;
