@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity  {
         img_weather = (ImageView)findViewById(R.id.img_weather);
         progressWheel = (ProgressWheel)findViewById(R.id.progress_wheel);
 
-        Con_txt.setVisibility(View.GONE);
-        txt_dsc.setVisibility(View.GONE);
+        Con_txt.setVisibility(View.INVISIBLE);
+        txt_dsc.setVisibility(View.INVISIBLE);
     }
 
     public void Pars() {

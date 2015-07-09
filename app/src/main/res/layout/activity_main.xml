@@ -9,14 +9,6 @@
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
-    <com.pnikosis.materialishprogress.ProgressWheel
-        android:id="@+id/progress_wheel"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        wheel:matProg_barColor="#5588FF"
-        wheel:matProg_progressIndeterminate="true" android:visibility="gone"/>
     <TextView
         android:text="@string/hello_world"
         android:layout_width="wrap_content"
@@ -26,29 +18,48 @@
         android:layout_marginStart="38dp" android:layout_marginTop="35dp"
         android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" android:translationZ="10dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Type_wdr"
-        android:id="@+id/Con_txt"
-        android:textSize="30sp" android:textStyle="bold"
-        android:textColor="#6f010001"
-        android:layout_below="@+id/Title_it" android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/img_weather"
-        android:src="@drawable/abc_btn_switch_to_on_mtrl_00001" android:layout_below="@+id/Title_it"
-        android:layout_centerHorizontal="true" android:layout_marginTop="32dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/txt_dsc"
-        android:textStyle="bold" android:textSize="20sp"
-        android:layout_centerVertical="true" android:layout_centerHorizontal="true"
-        android:textColor="#53010101"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|fill_vertical"
+        android:translationZ="10dp"
+        android:background="#ff7600" android:layout_below="@+id/Title_it"
+        android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+        android:layout_marginTop="36dp" android:transitionGroup="false">
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:id="@+id/img_weather"
+            android:src="@drawable/abc_btn_switch_to_on_mtrl_00001"
+            android:layout_below="@+id/Title_it" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" android:layout_gravity="right"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Type_wdr"
+            android:id="@+id/Con_txt"
+            android:textSize="30sp" android:textStyle="bold"
+            android:textColor="#fff8ff"
+            android:layout_below="@+id/Title_it" android:layout_centerHorizontal="true"
+            android:layout_marginTop="79dp"/>
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            wheel:matProg_barColor="#ffffff"
+            wheel:matProg_progressIndeterminate="true" android:visibility="visible"
+            android:layout_gravity="center_horizontal" android:layout_below="@+id/img_weather"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txt_dsc"
+            android:textStyle="bold" android:textSize="20sp"
+            android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:textColor="#53ffffff" android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
