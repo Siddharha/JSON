@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JSON</string>
+
+    <string name="hello_world">Weather</string>
+    <string name="action_settings">Settings</string>
+    <string name="Type_wdr">Weather Type..</string>
+</resources>
